@@ -1,0 +1,828 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css");
+
+:root {
+  --logo-color: #678E19;
+  --black-color: #171717;
+  --bg-color: #f2f2f2;
+  --grey-color: #eeeeee;
+  --white-color: #dedede;
+  --button-color: rgb(124, 205, 44);
+  --yellow-color: #FFC107;
+  --text-color: #333;
+  --light-green: #8ec63f;
+  --light-red: #ef4136;
+}
+
+
+#strip {
+    height: 50px;
+    background-color: var(--black-color);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+}
+
+#Lstrip {
+    display: flex;
+    color: var(--white-color);
+    font-size: 1.5rem;
+    gap: 20px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    #strip {
+        flex-direction: column;
+        padding: 10px;
+        text-align: center;
+    }
+    #Lstrip, #Rstrip {
+        justify-content: center;
+        gap: 10px;
+    }
+    #Rstrip .hdr-icon, #sbtn {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 576px) {
+    #Rstrip i.hdr-icon {
+        display: none; /* Hide phone icons on smaller screens */
+    }
+    #sbtn {
+        font-size: 0.8rem;
+        padding: 8px 10px;
+      }
+    }
+    
+    #sbtn{
+        margin: 20px ;
+        margin-left: 10px;
+        margin-right: 55px;
+        padding: 5px 15px;
+        border-radius: 5px;
+        font-weight: 600;
+        font-size: small;
+        background-color: var(--button-color);
+        border: 0px;
+        font-weight: bold;
+    }
+    
+    .hdr-icon{
+        color: var(--button-color);
+        padding: 10px;
+        font-weight: 600;
+    }
+
+.navbar-brand {
+    padding-left: 40px;
+}
+
+.nav-item {
+    font-weight: 500;
+    font-size: large;
+    margin: 0px 20px;
+    padding: 5px 0px;
+}
+
+.nav-item:hover {
+    box-shadow: 0 12px 0 0 var(--yellow-color);
+}
+
+/* Center the caption in the carousel */
+.caption {
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    text-align: center !important;
+    width: 100% !important;
+    max-width: 800px !important; /* Limits width to prevent overflow */
+    color: white !important;
+    z-index: 10 !important;
+    padding: 0 15px !important; /* Adds padding for small screens */
+}
+
+/* Hero Section Text Styling */
+#H1 {
+    font-size: 5rem !important;
+    font-weight: bold !important;
+    text-shadow: 4px 4px 5px rgb(65, 65, 65) !important;
+}
+
+.lead {
+    font-weight: 500 !important;
+    text-shadow: 4px 4px 5px rgb(65, 65, 65) !important;
+    margin-bottom: 20px !important;
+    padding: 15px 0px !important;
+}
+
+#Hbtn {
+    padding: 10px 40px !important;
+    font-weight: 600 !important;
+    box-shadow: 4px 6px 8px rgb(69, 69, 69) !important;
+    border-bottom: 5px solid rgb(184, 90, 17) !important;
+    margin-top: 15px !important; /* Adds some spacing between text and button */
+}
+
+/* Background Image Styling */
+.hero-bg {
+    filter: blur(5px) !important;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    #H1 {
+        font-size: 3rem !important;
+    }
+    .lead {
+        font-size: 1rem !important;
+        padding: 10px 0px !important;
+    }
+    #Hbtn {
+        padding: 8px 30px !important;
+        font-size: 1rem !important;
+    }
+}
+
+@media (max-width: 768px) {
+    #H1 {
+        font-size: 2.5rem !important;
+    }
+    .lead {
+        font-size: 0.8rem !important;
+        padding: 8px 0px !important;
+    }
+    #Hbtn {
+        padding: 8px 25px !important;
+        font-size: 0.9rem !important;
+    }
+}
+
+@media (max-width: 576px) {
+    #H1 {
+        font-size: 2rem !important;
+    }
+    .lead {
+        
+        font-size: 0.6rem !important;
+        padding: 5px 0px !important;
+    }
+    #Hbtn {
+        padding: 6px 20px !important;
+        font-size: 0.8rem !important;
+        margin-top: 0px !important; /* Ensure spacing between button and text */
+    }
+}
+
+
+
+
+
+/* Our Advantages Section  */
+
+.Span{
+    color: var(--logo-color);
+}
+
+.adv-h2{
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 50px;
+}
+
+.adv-icon{
+    color: var(--logo-color);
+    font-size: 4rem;
+    background-color: var(--grey-color);
+    padding: 40px 50px;
+    border-radius: 5000px;
+}
+
+.iconss{
+    margin: 0px 22px;
+}
+
+.p{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: grey;
+    font-weight: 600;
+}
+
+
+.icon-p{
+    line-height: 16px;
+    color: grey;
+}
+
+/* About Us Section */
+
+.about-us{
+    margin-bottom: 50px;
+    position: relative;
+    padding-top: 0px; /* Adds space for the heading */
+    background-color: var(--bg-color)
+}
+
+.top-border-shadow::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 10px; /* Adjust height as needed */
+  background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.0));
+  transform: translateY(-50%); /* Positions the shadow slightly above the top edge */
+  z-index: 1;
+  pointer-events: none; /* Allows content below to be clickable */
+}
+
+
+#about-r{
+    margin-top: 80px;
+    padding-left: 80px;
+}
+
+#abt-h2{
+  margin-top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: var(--text-color); /* Set the color of the text */
+  z-index: 1;
+}
+
+#abt-cont{
+    padding: 0px;
+}
+
+
+/* Our Services Section */
+
+/* Service Icon Styling */
+/* Service Icon Styling */
+.srv-icon {
+    color: #ff0022;
+    font-size: 3rem;
+    background-color: var(--yellow-color);
+    padding: 10px 20px;
+    border-radius: 50%;
+}
+
+.star-container {
+    position: relative;
+    z-index: 1;
+}
+
+.srv-text {
+    width: 100%;
+    height: 250px;
+    border-radius: 10px;
+    background-color: var(--bg-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: -50px; /* Center the star on top of the box */
+    padding: 20px;
+    text-align: center;
+}
+
+#srv-cnt {
+    gap: 20px;
+}
+
+.srv-btn {
+    margin-top: 20px;
+}
+
+.srv-box {
+    width: 100%; /* Ensures uniform sizing within each column */
+    max-width: 300px; /* Restricts max width for visual consistency */
+}
+
+
+
+
+/* Our Portfolio Section */
+
+
+.portfolio-links{
+    color: var(--white-color);
+    text-decoration: none;
+    font-weight: 600;
+    padding-left: 20px;
+}
+.portfolio-links:hover{
+    color: var(--yellow-color);
+}
+
+.active-link:active{
+    color: var(--yellow-color);
+    font-weight: 900;
+}
+
+#test:target{
+    color: var(--yellow-color);
+}
+
+#Portfolio-Pics{
+    gap: -20px;
+}
+
+
+/* Our Process Section */
+/* Process Section Styling */
+.process {
+  position: relative;
+  padding-top: 40px;
+}
+
+.process .process-step {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.process .circle-icon {
+  background-color: white;
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border: 4px solid #ddd;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  color: #88b50f;
+  font-size: 70px;
+  z-index: 2; /* Ensure it stays above the line */
+}
+
+.process .circle-icon .step-number {
+  position: absolute;
+  top: -18px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--yellow-color);
+  color: var(--text-color);
+  border-radius: 50%;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 20px;
+}
+
+/* Style for the horizontal connecting line */
+.process .horizontal-line {
+  position: absolute;
+  top: 55%;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background-color: #ddd;
+  z-index: 1; /* Make sure it's behind the circles */
+}
+
+.process h5 {
+  font-weight: bold;
+  color: var(--text-color);
+  margin-top: 15px;
+}
+
+
+/* People About Us Section */
+.people-about-us {
+  background-color: var(--bg-color);
+  padding-top: 30px;
+}
+
+.person-content {
+  padding: 20px;
+  min-height: 160px;
+  display: flex;
+  align-items: center;
+}
+
+#person-2{
+  border-left: 2px solid #bbbbbb;
+  padding-left: 40px;
+}
+
+#person-3{
+  border-top: 2px solid #bbbbbb;
+}
+
+#person-4{
+  border-top: 2px solid #bbbbbb;
+  border-left: 2px solid #bbbbbb;
+  padding-left: 40px;
+}
+
+
+.person-icon {
+  flex-shrink: 0;
+  margin-right: 20px;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #fff;
+  color: #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center; 
+  font-size: 70px;
+  font-weight: bold;
+}
+
+.person-info h5 {
+  font-size: 16px;
+  color: #333;
+  font-weight: bold;
+}
+
+.person-info p {
+  font-size: 14px;
+  color: #777;
+  margin-top: 10px;
+  text-align: justify;
+  margin-bottom: 0px;
+}
+
+.person-info {
+    text-align: left;
+}
+
+.carousel-indicators .carousel-button {
+    width: 15px !important;            /* Adjust the size as needed */
+    height: 15px !important;           /* Adjust the size as needed */
+    background-color: var(--yellow-color) !important; /* Adjust color if needed */
+    border-radius: 50% !important;     /* This makes the indicators circular */
+    opacity: 1 !important;             /* Makes the indicators fully visible */
+}
+
+.carousel-indicators .active.carousel-button {
+    background-color: #ff6e07 !important; /* Change color for active indicator */
+}
+
+/* Top & Bottom Border */
+.people-about-us {
+  background-color: var(--bg-color);
+  padding-top: 30px;
+  position: relative;
+}
+
+.people-about-us::before,
+.people-about-us::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 4px; /* Thickness of the line */
+  background: linear-gradient(to right, transparent, #bbbbbb, transparent);
+}
+
+.people-about-us::before {
+  top: 0; /* Position at the top */
+}
+
+.people-about-us::after {
+  bottom: 0; /* Position at the bottom */
+}
+
+
+/* Our Skills Section */
+
+
+/* Defining calculation of circles by variables */
+.circular-progress {
+    text-align: center;
+    padding: px 0px;
+  --size: 200px;
+  --half-size: calc(var(--size) / 2);
+  --stroke-width: 20px;
+  --radius: calc((var(--size) - var(--stroke-width)) / 2);
+  --circumference: calc(var(--radius) * pi * 2);
+  --dash: calc((var(--progress) * var(--circumference)) / 100);
+    animation: progress-animation 2s linear 0s 1 forwards;
+}
+
+/* circle shape declaration */
+.circular-progress circle {
+  cx: var(--half-size);
+  cy: var(--half-size);
+  r: var(--radius);
+  stroke-width: var(--stroke-width);
+  fill: none;
+  stroke-linecap: round;
+}
+
+/* Circles styling */
+.circular-progress circle.fg {
+  transform: rotate(-90deg);
+  transform-origin: var(--half-size) var(--half-size);
+  stroke-dasharray: var(--dash) calc(var(--circumference) - var(--dash));
+  transition: stroke-dasharray 0.3s linear 0s;
+  stroke: var(--yellow-color);
+}
+
+/* Yellow */
+.circular-progress circle.bg {
+  stroke: var(--yellow-color);
+  stroke-width: 5px;
+}
+
+
+/* RED */
+.circular-progress circle.fg.red {
+    stroke: var(--light-red);
+}
+
+.circular-progress circle.bg.red {
+  stroke: #ff0022;
+  stroke-width: 5px;
+}
+
+/* GREEN */
+.circular-progress circle.fg.green {
+    stroke: var(--light-green);
+}
+
+.circular-progress circle.bg.green {
+  stroke: var(--logo-color);
+  stroke-width: 5px;
+}
+
+/* Black */
+.circular-progress circle.fg.black {
+    stroke: var(--text-color);
+}
+
+.circular-progress circle.bg.black {
+  stroke: var(--text-color);
+  stroke-width: 5px;
+}
+
+@property --progress {
+  syntax: "<number>";
+  inherits: false;
+  initial-value: 0;
+}
+
+/* ANIMATION */
+/* Yellow */
+@keyframes progress-animation {
+  from {
+    --progress: 0;
+  }
+  to {
+    --progress: 45;
+  }
+}
+
+
+/* RED */
+.circular-progress.red {
+    animation: progress-animation-red 2s linear 0s 1 forwards;
+}
+
+@keyframes progress-animation-red {
+  from {
+    --progress: 0;
+  }
+  to {
+    --progress: 60;
+  }
+}
+
+
+/* GREEN */
+.circular-progress.green {
+    animation: progress-animation-green 2s linear 0s 1 forwards;
+}
+
+@keyframes progress-animation-green {
+  from {
+    --progress: 0;
+  }
+  to {
+    --progress: 75;
+  }
+}
+
+
+/* BLACK */
+.circular-progress.black {
+    animation: progress-animation-black 2s linear 0s 1 forwards;
+}
+
+@keyframes progress-animation-black {
+  from {
+    --progress: 0;
+  }
+  to {
+    --progress: 80;
+  }
+}
+
+
+/* TEXT SECTION */
+
+/* Container styling */
+.progress-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+}
+
+/* Centered text in SVG */
+.circular-progress text.percentage {
+  font-size: 2em;
+  fill: #333;
+  font-weight: 900;
+  text-anchor: middle;
+}
+
+.circular-progress text.yellow {
+  fill: var(--yellow-color);
+}
+
+.circular-progress text.red {
+  fill: #ff0022;
+}
+
+.circular-progress text.green {
+  fill: var(--logo-color);
+}
+
+
+/* Heading styling */
+.progress-title {
+  margin-top: 20px;
+  font-size: 1em;
+  font-weight: 700;
+  color: #333;
+  text-align: center;
+}
+
+/* Responsive Styles */
+/* @media (max-width: 992px) {}
+
+@media (max-width: 768px) {}
+
+@media (max-width: 576px) {} */
+
+
+/* <========= Start Your New Project section =========> */
+
+/* Custom styles */
+.start-project-section {
+  background-color: var(--light-green); /* Green background */
+  padding: 40px 0;
+}
+
+.section-title {
+  font-size: 68px;
+  font-weight: bold;
+  color: white;
+}
+
+.input-field {
+  width: 280px !important;
+}
+
+.input-field:focus {
+  box-shadow: 0px 0 6px 4px rgba(39, 122, 1, 0.405) !important;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.70s ease-in-out !important;
+  border-color: rgba(39, 122, 1, 0.405) !important;
+}
+
+.input-field:hover {
+  /* box-shadow: 0px 0 6px 4px rgba(39, 122, 1, 0.405) !important; */
+  transition: border-color 0.15s ease-in-out, box-shadow 0.70s ease-in-out !important;
+  border: 3px solid rgba(39, 122, 1, 0.405)  !important;
+}
+
+
+#send-request-btn {
+  margin: 0px 20px;
+  padding: 9px 20px;
+  font-size: 18px;
+  font-weight: 500;
+  /* box-shadow: 2px 2px 10px rgb(69, 69, 69); */
+  border-bottom: 4px solid rgb(217, 108, 24);
+}
+
+
+.section-description {
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+
+
+/* Our Contacts Section */
+
+
+/* Custom styles */
+.contacts-section {
+  background-color: #ffffff;
+  color: #333333;
+}
+
+.section-title {
+  font-size: 36px;
+  font-weight: bold;
+}
+
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 20px;
+}
+
+.contact-item {
+  font-weight: 600;
+  color: #333333;
+}
+
+.contact-icon {
+  margin: 0px 10px;
+  color: var(--logo-color);
+  font-size: 1.5rem;
+}
+
+.world-map {
+  position: relative;
+}
+
+.map-marker {
+  position: absolute;
+  font-size: 30px;
+}
+
+
+
+/* Footer styles */
+.footer-section {
+  background-color: #6B8E23; /* Green color */
+  color: #FFFFFF;
+}
+
+.footer-title {
+  font-size: 25px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.footer-link {
+  line-height: 35px;
+}
+
+.footer-link {
+  color: #FFFFFF;
+  text-decoration: none;
+}
+
+.footer-link:hover {
+  color: #202020; /* Dark color on hover */
+}
+
+#footer-social-links {
+  color: #202020;
+  font-size: 30px;
+  margin-right: 10px;
+}
+
+#footer-social-links:hover {
+  color: var(--white-color); /* White color on hover */
+}
+
+.panacloud_logo {
+  width: 150px;
+}
+
+/* Vertical Line Between Sections */
+.footer-section-border {
+  border-left: 2px solid var(--light-green); /* White vertical line */
+  padding-left: 20px; /* Spacing after the line */
+}
+
+#footer-container {
+  padding: 0px 110px;
+}
+
