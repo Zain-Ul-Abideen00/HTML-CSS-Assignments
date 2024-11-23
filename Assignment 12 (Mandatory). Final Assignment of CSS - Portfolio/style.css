@@ -96,7 +96,7 @@
     transform: translate(-50%, -50%) !important;
     text-align: center !important;
     width: 100% !important;
-    max-width: 800px !important; /* Limits width to prevent overflow */
+    max-width: 800px !important;
     color: white !important;
     z-index: 10 !important;
     padding: 0 15px !important; /* Adds padding for small screens */
@@ -104,76 +104,98 @@
 
 /* Hero Section Text Styling */
 #H1 {
-    font-size: 5rem !important;
+    font-size: 4rem !important;
     font-weight: bold !important;
-    text-shadow: 4px 4px 5px rgb(65, 65, 65) !important;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7) !important;
 }
 
 .lead {
     font-weight: 500 !important;
-    text-shadow: 4px 4px 5px rgb(65, 65, 65) !important;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7) !important;
     margin-bottom: 20px !important;
-    padding: 15px 0px !important;
+    padding: 10px 0px !important;
 }
 
 #Hbtn {
-    padding: 10px 40px !important;
+    padding: 8px 30px !important;
     font-weight: 600 !important;
-    box-shadow: 4px 6px 8px rgb(69, 69, 69) !important;
-    border-bottom: 5px solid rgb(184, 90, 17) !important;
-    margin-top: 15px !important; /* Adds some spacing between text and button */
+    font-size: 1.2rem !important;
+    box-shadow: 3px 4px 6px rgba(0, 0, 0, 0.7) !important;
+    border-bottom: 4px solid rgba(255, 165, 0, 0.9) !important;
+    margin-top: 15px !important;
 }
 
 /* Background Image Styling */
 .hero-bg {
-    filter: blur(5px) !important;
+    object-fit: cover; /* Ensures the image fills the container while maintaining its aspect ratio */
+    width: 100%; /* Make the image width responsive */
+    height: auto; /* Default height auto for large screens */
 }
 
-/* Responsive Styles */
+
+/* Responsive Styles for Tablets and Smaller Screens */
 @media (max-width: 992px) {
+    .carousel-inner {
+        height: 400px !important; /* Set height for tablets */
+    }
+    .hero-bg {
+        height: 100%; /* Image should stretch to fill the carousel height */
+        width: auto; /* Allow width to adjust for a proper fit */
+    }
     #H1 {
         font-size: 3rem !important;
     }
     .lead {
         font-size: 1rem !important;
-        padding: 10px 0px !important;
+        padding: 8px 0px !important;
     }
     #Hbtn {
-        padding: 8px 30px !important;
+        padding: 6px 25px !important;
         font-size: 1rem !important;
     }
 }
 
 @media (max-width: 768px) {
+    .carousel-inner {
+        height: 350px; /* Smaller height for tablets */
+    }
+    .hero-bg {
+        height: 100%; /* Adjust to fit the new carousel height */
+        width: auto; /* Ensure the image scales correctly */
+    }
     #H1 {
         font-size: 2.5rem !important;
     }
     .lead {
-        font-size: 0.8rem !important;
-        padding: 8px 0px !important;
+        font-size: 0.9rem !important;
+        padding: 6px 0px !important;
     }
     #Hbtn {
-        padding: 8px 25px !important;
+        padding: 6px 20px !important;
         font-size: 0.9rem !important;
     }
 }
 
 @media (max-width: 576px) {
+    .carousel-inner {
+        height: 300px; /* Smaller height for mobiles */
+    }
+    .hero-bg {
+        height: 100%; /* Make the image fill the height of the carousel */
+        width: auto; /* Maintain proportions */
+    }
     #H1 {
         font-size: 2rem !important;
     }
     .lead {
-        
-        font-size: 0.6rem !important;
+        font-size: 0.7rem !important;
         padding: 5px 0px !important;
     }
     #Hbtn {
-        padding: 6px 20px !important;
+        padding: 5px 15px !important;
         font-size: 0.8rem !important;
-        margin-top: 0px !important; /* Ensure spacing between button and text */
     }
 }
-
 
 
 
@@ -714,10 +736,8 @@
 
 
 .section-description {
-  font-size: 16px;
   font-weight: 600;
-  color: white;
-  max-width: 800px;
+  max-width: 600px;
   margin: 0 auto;
 }
 
@@ -769,51 +789,71 @@
 
 /* Footer styles */
 .footer-section {
-  background-color: #6B8E23; /* Green color */
-  color: #FFFFFF;
+    background-color: #6B8E23; /* Green color */
+    color: #FFFFFF;
+}
+
+.centered-content {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: center; 
+    text-align: initial;
 }
 
 .footer-title {
-  font-size: 25px;
-  font-weight: bold;
-  text-transform: uppercase;
-  margin-bottom: 15px;
+    font-size: 25px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 15px;
 }
 
 .footer-link {
-  line-height: 35px;
-}
-
-.footer-link {
-  color: #FFFFFF;
-  text-decoration: none;
+    color: #FFFFFF;
+    text-decoration: none;
+    line-height: 35px;
 }
 
 .footer-link:hover {
-  color: #202020; /* Dark color on hover */
+    color: #202020; /* Dark color on hover */
 }
 
-#footer-social-links {
-  color: #202020;
-  font-size: 30px;
-  margin-right: 10px;
+.footer-social-link {
+    color: #202020;
+    font-size: 30px;
+    margin-right: 10px;
 }
 
-#footer-social-links:hover {
-  color: var(--white-color); /* White color on hover */
+.footer-social-link:hover {
+    color: var(--white-color); /* White color on hover */
 }
 
 .panacloud_logo {
-  width: 150px;
+    width: 150px;
 }
 
-/* Vertical Line Between Sections */
-.footer-section-border {
-  border-left: 2px solid var(--light-green); /* White vertical line */
-  padding-left: 20px; /* Spacing after the line */
+.footer-border {
+  border-right: solid 2px var(--light-green);
+  border-left: solid 2px var(--light-green);
 }
 
-#footer-container {
-  padding: 0px 110px;
-}
+@media (max-width: 768px) {
+    #footer-container {
+        padding: 15px;
+    }
 
+    .footer-border {
+        border-left: none;
+        border-right: none;
+    }
+
+    .footer-link {
+        font-size: 14px;
+    }
+
+    .centered-content {
+      display: flex;
+      flex-direction: column; /* Stack elements vertically */
+      align-items: center; 
+      text-align: center;
+    }
+}
