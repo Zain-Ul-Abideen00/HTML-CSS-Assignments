@@ -135,8 +135,8 @@
 
 /* Responsive Styles for Tablets and Smaller Screens */
 @media (max-width: 992px) {
-    .carousel-inner {
-        height: 400px !important; /* Set height for tablets */
+    .hero-inner {
+        height: 500px !important; /* Set height for tablets */
     }
     .hero-bg {
         height: 100%; /* Image should stretch to fill the carousel height */
@@ -156,13 +156,6 @@
 }
 
 @media (max-width: 768px) {
-    .carousel-inner {
-        height: 350px; /* Smaller height for tablets */
-    }
-    .hero-bg {
-        height: 100%; /* Adjust to fit the new carousel height */
-        width: auto; /* Ensure the image scales correctly */
-    }
     #H1 {
         font-size: 2.5rem !important;
     }
@@ -177,13 +170,6 @@
 }
 
 @media (max-width: 576px) {
-    .carousel-inner {
-        height: 300px; /* Smaller height for mobiles */
-    }
-    .hero-bg {
-        height: 100%; /* Make the image fill the height of the carousel */
-        width: auto; /* Maintain proportions */
-    }
     #H1 {
         font-size: 2rem !important;
     }
